@@ -1,8 +1,19 @@
 
+
 # 블록체인 튜토리얼
 
 이 튜토리얼은 블록체인 스마트 컨트랙트를 배포하고 Django 웹 애플리케이션을 통해 상호 작용하는 방법을 설명합니다.
 
+## Screenshots
+
+### Screenshot 1
+<img src="screenshots/스크린샷 2024-08-06 오전 4.03.52.png" alt="Screenshot 1" width="600"/>
+
+### Screenshot 2
+<img src="screenshots/스크린샷 2024-08-06 오전 4.04.12.png" alt="Screenshot 2" width="600"/>
+
+### Screenshot 3
+<img src="screenshots/스크린샷 2024-08-06 오전 4.04.18.png" alt="Screenshot 3" width="600"/>
 ## 사전 준비
 
 - Docker

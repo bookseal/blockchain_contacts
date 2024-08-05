@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     wget \
     cmake \
-    libboost-all-dev
+    libboost-all-dev \
+    curl
 
 # 필요한 Python 패키지를 설치합니다
 COPY requirements.txt .
@@ -18,6 +19,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 프로젝트 파일을 컨테이너로 복사합니다
 COPY . .
 
+# entrypoint.sh 실행 권한 부여
+RUN chmod +x /app/entrypoint.sh
 
-# Django 개발 서버를 실행합니다
+# entrypoint.sh 스크립트 실행 및 Django 개발 서버 시작
+ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

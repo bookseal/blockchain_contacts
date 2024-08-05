@@ -1,0 +1,24 @@
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ganache
+
+  ganache:
+    image: trufflesuite/ganache:latest
+    platform: linux/arm64
+    ports:
+      - "8545:8545"
+    command: >
+      --wallet.mnemonic "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
+      --chain.chainId 1337
+      --wallet.totalAccounts 10
+      --server.host 0.0.0.0
+      --server.port 8545
+      --chain.networkId 5777

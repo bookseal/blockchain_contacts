@@ -1,0 +1,4 @@
+Django==3.2.7
+web3==5.24.0
+py-solc-x==1.1.1
+eth-utils==1.10.0

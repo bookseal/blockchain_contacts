@@ -13,4 +13,4 @@ echo "Ganache started"
 python contracts/deploy.py
 
 # Django 개발 서버 실행
-exec "$@"
+python manage.py runserver 0.0.0.0:8000
